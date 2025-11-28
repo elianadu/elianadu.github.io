@@ -1,17 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    min-height: 100vh;
+}
+
 html {
   /* px means "pixels". The base font size is now 10 pixels high */
   font-size: 20px;
   /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
   font-family: "EB Garamond", serif;
   background-color: #fffefa;
-  color: #1A1A19
+  color: #1a1a19;
 }
 
 h1 {
-font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.header{
+.header {
   display: flex;
   list-style: none;
   padding: 0;
@@ -21,8 +29,7 @@ font-family: "Montserrat", sans-serif;
   border-bottom: 0.5px dotted black;
 }
 
-
-nav a{
+nav a {
   flex: 1;
   text-decoration: none;
   color: #1a1a19;
@@ -34,7 +41,7 @@ nav a{
   line-height: 2;
 }
 
-nav div{
+nav div {
   flex: 1;
   text-decoration: none;
   color: #1a1a19;
@@ -47,40 +54,39 @@ nav div{
 }
 
 nav .current {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-nav a:hover{
+nav a:hover {
   background-color: #faf6e9;
 }
 
 nav .filler {
-    flex: 3;
+  flex: 3;
 }
 
 main {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 main section {
-    flex:1;
-    margin: 5%;
-    
+  flex: 1;
+  margin: 5%;
 }
 main div {
-    flex:1;
+  flex: 1;
 }
 
 main div img {
-    width:100%;
+  width: 100%;
 }
 
 .green-link {
-    color: #3e8463;
+  color: #3e8463;
 }
 
 .green-link:hover {
-    color: #bfd6bd;
-    text-decoration: none;
+  color: #bfd6bd;
+  text-decoration: none;
 }
