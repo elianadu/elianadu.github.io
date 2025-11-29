@@ -22,48 +22,40 @@
   <body>
     <nav>
       <ul class = "sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-      <li><a href="#">Eliana Du</a></li>
-      <li><a class="current" href="#">Home</a></li>
-      <li><a href="pages/writing.html">Writing</a></li>
+        <li class="hoverIndicator" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li class="hoverIndicator"><a class="current" href="#">Home</a></li>
+      <li class="hoverIndicator"><a href="pages/writing.html">Writing</a></li>
       </ul>
       <ul>
       <li class="hideOnSuperTiny"><a href="#">Eliana Du</a></li>
-      <li class="hideOnMobile"><a class="current" href="#">Home</a></li>
-      <li class="hideOnMobile"><a href="pages/writing.html">Writing</a></li>
-      <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      <li class="hideOnMobile hoverIndicator"><a class="current" href="#">Home</a></li>
+      <li class="hideOnMobile hoverIndicator"><a href="pages/writing.html">Writing</a></li>
+      <li class="menu-button hoverIndicator" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
       </ul>
     </nav>
 
     <main>
-      <div>
-        <img
+      <img
           src="images/me_by_nassau_hall.jpg"
           alt="Picture of me!"
-          width="300px"
-        />
-        <p>Click through these images!</p>
-      </div>
+      />
 
       <section>
         <header>
           <h1>Hi!</h1>
         </header>
-        <p>
-          I'm playing around with things, so don't judge this site just yet!
-        </p>
+        <div class="main-text">
         <p>
           I'm Eliana Du, a sophomore studying Computer Science at Princeton
           University. I'm hoping to minor in Math and Creative Writing. I love
           being moved and moving others, especially through words.
         </p>
-        <p>Do I dare / Disturb the universe?</p>
         <p>
           Right now, I'm trying to work through the Mozilla front-end web dev
           curriculum over Thanksgiving break (hence, this site).
         </p>
+        </div>
 
-        <section>
           <p style="text-align: center">
             <a class="green-link" href="mailto:elianadu@princeton.edu">Email</a> &nbsp;/&nbsp;
             <a class="green-link" href="#">CV</a> &nbsp;/&nbsp;

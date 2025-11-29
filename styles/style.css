@@ -18,6 +18,7 @@ html {
 
 h1 {
   font-family: "Montserrat", sans-serif;
+  padding-bottom: 10px;
 }
 
 nav {
@@ -56,7 +57,7 @@ nav .current {
   text-decoration: underline;
 }
 
-nav a:hover {
+nav .hoverIndicator:hover{
   background-color: #86B199;
 }
 
@@ -91,6 +92,21 @@ nav li:first-child{
     display: none;
 }
 
+img {
+    height: 100vh;
+    object-fit:cover
+    
+}
+
+@media(max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+    main section {
+        padding: 10%;
+    }
+}
+
 @media(max-width: 450px) {
     .hideOnMobile{
         display: none;
@@ -109,21 +125,22 @@ nav li:first-child{
     }
 }
 
+
 main {
   display: flex;
-  align-items: center;
 }
 
 main section {
-  flex: 1;
-  margin: 5%;
+  padding: 5%;
+  justify-content: center;
+  align-content: center;
 }
-main div {
-  flex: 1;
+main img {
+  width: 100%;
 }
 
-main div img {
-  width: 100%;
+.main-text p {
+    padding: 10px 0px 10px 0px;
 }
 
 .green-link {
@@ -131,6 +148,6 @@ main div img {
 }
 
 .green-link:hover {
-  color: #bfd6bd;
+  color: #86B199;
   text-decoration: none;
 }
