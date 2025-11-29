@@ -13,16 +13,12 @@ html {
   font-family: "EB Garamond", serif;
   background-color: #E0F0E4;
   
-  color: #0A3216;
+  color: #1E1415;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
   padding-bottom: 10px;
-}
-
-h1 .poem-author {
-    font-size: 25px;
 }
 
 .writing {
