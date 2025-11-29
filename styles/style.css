@@ -1,9 +1,9 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 html {
@@ -19,38 +19,36 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
-.header {
-  display: flex;
+nav {
+  background-color: #fffefa;
+  /*display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: right;
-  border-bottom: 0.5px dotted black;
+  border-bottom: 0.5px dotted black;*/
 }
 
-nav a {
-  flex: 1;
-  text-decoration: none;
-  color: #1a1a19;
-  padding: 5px;
-  box-sizing: content-box;
-  width: 10%;
-  justify-content: center;
-  text-align: center;
-  line-height: 2;
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-nav div {
-  flex: 1;
-  text-decoration: none;
-  color: #1a1a19;
-  padding: 5px;
-  box-sizing: content-box;
-  width: 10%;
-  justify-content: center;
-  text-align: left;
-  line-height: 2;
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding:0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #1a1a19;
 }
 
 nav .current {
@@ -61,8 +59,20 @@ nav a:hover {
   background-color: #faf6e9;
 }
 
-nav .filler {
-  flex: 3;
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #bfd6bd;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
