@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Writing</title>
+    <meta name="author" content="Eliana Du" />
+    <meta name="description" content="The personal website of Eliana Du." />
+    <link rel="icon" href="images/favicon_sunflower.png" />
+    <title>Eliana Du</title>
     <link href="../styles/style.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -17,24 +20,30 @@
   </head>
   <body>
     <nav>
+      <ul class = "sidebar">
+        <li class="hoverIndicator" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a class="hoverIndicator" href="../index.html">Home</a></li>
+      <li class="current"><a href="#">Writing</a></li>
+      </ul>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li>Writing</li>
+      <li class="hideOnSuperTiny"><a href="#">Eliana Du</a></li>
+      <li class="hideOnMobile hoverIndicator"><a href="../index.html">Home</a></li>
+      <li class="hideOnMobile hoverIndicator"><a class="current" href="#">Writing</a></li>
+      <li class="menu-button hoverIndicator" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
       </ul>
     </nav>
 
     <header>
-      <h1>Writing</h1>
+      <h1 class="writing">A Blank White Page </h1>
     </header>
-    <main>
-      <p>Just some thoughts.</p>
-      <section>
-        <ol reversed>
-          <li>i WILL figure out how to make a blog
-          </li>
-          <li>Things I've Read and Loved</li>
-        </ol>
-      </section>
+    <main class="poem-text">
+      <p>
+        is a meadow <br />
+        after a snowfall<br />
+        that a poem<br />
+        hopes to cross <br>
+        <div class="poem-author"><a class="green-link" href="https://www.poetryfoundation.org/poems/91107/a-blank-white-page">- by Francisco X. Alarcón</a></div>
+      </p>
     </main>
   </body>
 </html>

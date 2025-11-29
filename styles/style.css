@@ -21,6 +21,24 @@ h1 {
   padding-bottom: 10px;
 }
 
+h1 .poem-author {
+    font-size: 25px;
+}
+
+.writing {
+  padding: 50px 0px 0px 50px;
+}
+
+.poem-text {
+    padding: 20px 0px 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.poem-author{
+    padding: 20px 0px 20px 0px;
+}
+
 nav {
   background-color: #6D9D82;
   /*display: flex;
@@ -42,6 +60,7 @@ nav ul {
 
 nav li{
     height: 50px;
+    font-size: 22px
 }
 
 nav a{
@@ -53,7 +72,7 @@ nav a{
     color: #FFFDF6;
 }
 
-nav .current {
+nav li .current {
   text-decoration: underline;
 }
 
@@ -94,7 +113,7 @@ nav li:first-child{
 
 img {
     height: 100vh;
-    object-fit:cover
+    object-fit:cover;
     
 }
 
@@ -145,6 +164,10 @@ main img {
 
 .green-link {
   color: #3e8463;
+}
+
+.orange-text:hover {
+    color: #ff8f00;
 }
 
 .green-link:hover {
