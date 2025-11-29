@@ -7,7 +7,7 @@
     <meta name="description" content="The personal website of Eliana Du." />
     <link rel="icon" href="images/favicon_sunflower.png" />
     <title>Eliana Du</title>
-    <link href="../styles/style.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,21 +22,23 @@
   <body>
     <nav>
       <ul class = "sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
       <li><a href="#">Eliana Du</a></li>
       <li><a class="current" href="#">Home</a></li>
-      <li><a href="writing.html">Writing</a></li>
+      <li><a href="pages/writing.html">Writing</a></li>
       </ul>
       <ul>
-      <li><a href="#">Eliana Du</a></li>
-      <li><a class="current" href="#">Home</a></li>
-      <li><a href="writing.html">Writing</a></li>
+      <li class="hideOnSuperTiny"><a href="#">Eliana Du</a></li>
+      <li class="hideOnMobile"><a class="current" href="#">Home</a></li>
+      <li class="hideOnMobile"><a href="pages/writing.html">Writing</a></li>
+      <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFDF6"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
       </ul>
     </nav>
 
     <main>
       <div>
         <img
-          src="../images/me_by_nassau_hall.jpg"
+          src="images/me_by_nassau_hall.jpg"
           alt="Picture of me!"
           width="300px"
         />
