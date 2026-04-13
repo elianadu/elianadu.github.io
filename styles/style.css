@@ -7,13 +7,205 @@ body {
 }
 
 html {
-  /* px means "pixels". The base font size is now 10 pixels high */
-  font-size: 20px;
-  /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
+  font-size: 18px;
   font-family: "EB Garamond", serif;
   background-color: #E0F0E4;
-  
   color: #1E1415;
+}
+
+/* ── Home page ────────────────────────────────────── */
+
+body.home {
+  background-color: #fefaf0;
+  color: #2a2a2a;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Page container */
+.home-container {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 72px 48px 80px;
+}
+
+/* Two-column grid */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 72px;
+  align-items: start;
+}
+
+/* Bio / text column */
+.bio h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e3a28;
+  margin-bottom: 1.2rem;
+}
+
+.bio p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+}
+
+.body-link {
+  color: #3d6b4f;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.body-link:hover {
+  color: #265c38;
+}
+
+/* Profile / right column */
+.profile-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+}
+
+@keyframes sway1 { 0%,100%{transform:rotate(-5deg)}  50%{transform:rotate(6deg)} }
+@keyframes sway2 { 0%,100%{transform:rotate(8deg)}   50%{transform:rotate(-4deg)} }
+@keyframes sway3 { 0%,100%{transform:rotate(-12deg)} 50%{transform:rotate(0deg)} }
+@keyframes sway4 { 0%,100%{transform:rotate(3deg)}   50%{transform:rotate(14deg)} }
+@keyframes sway5 { 0%,100%{transform:rotate(-8deg)}  50%{transform:rotate(5deg)} }
+@keyframes sway6 { 0%,100%{transform:rotate(10deg)}  50%{transform:rotate(-2deg)} }
+
+.sf {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* top-left */
+.tl1 { width: 52px; top: -28px; left: -24px; animation: sway1 3.1s ease-in-out infinite; }
+.tl2 { width: 38px; top: -10px; left:  14px; animation: sway3 2.7s ease-in-out infinite 0.5s; }
+.tl3 { width: 32px; top:  16px; left: -28px; animation: sway5 3.4s ease-in-out infinite 1.0s; }
+
+/* top-right */
+.tr1 { width: 50px; top: -26px; right: -22px; animation: sway2 2.9s ease-in-out infinite 0.3s; }
+.tr2 { width: 36px; top:  -8px; right:  12px; animation: sway4 3.2s ease-in-out infinite 0.8s; }
+.tr3 { width: 30px; top:  18px; right: -26px; animation: sway6 2.6s ease-in-out infinite 1.3s; }
+
+/* bottom-left */
+.bl1 { width: 50px; bottom: -26px; left: -22px; animation: sway3 3.0s ease-in-out infinite 0.2s; }
+.bl2 { width: 34px; bottom:  -8px; left:  10px; animation: sway1 2.8s ease-in-out infinite 0.7s; }
+.bl3 { width: 28px; bottom:  16px; left: -24px; animation: sway5 3.3s ease-in-out infinite 1.2s; }
+
+/* bottom-right */
+.br1 { width: 48px; bottom: -24px; right: -20px; animation: sway4 3.1s ease-in-out infinite 0.4s; }
+.br2 { width: 32px; bottom:  -6px; right:   8px; animation: sway2 2.7s ease-in-out infinite 0.9s; }
+.br3 { width: 26px; bottom:  18px; right: -22px; animation: sway6 3.5s ease-in-out infinite 1.5s; }
+
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.photo-illustrated {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: none;
+}
+
+.photo-wrapper:hover .photo-illustrated,
+.photo-wrapper.toggled .photo-illustrated {
+  opacity: 1;
+}
+
+.photo-caption {
+  font-size: 0.78rem;
+  color: #6b6b6b;
+  font-style: italic;
+  line-height: 1.45;
+  margin-top: 0.5rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Contact links list */
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #2a2a2a;
+  font-size: 1rem;
+  font-family: "EB Garamond", serif;
+}
+
+.contact-link:hover {
+  color: #3d6b4f;
+}
+
+.link-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #2c5440;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.link-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-link:hover .link-icon {
+  background-color: #3d6b4f;
+}
+
+/* Home responsive */
+@media (max-width: 640px) {
+  .home-container {
+    padding: 130px 28px 60px;
+  }
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .profile-photo {
+    aspect-ratio: 4 / 3;
+  }
+  .flower-3, .flower-4 {
+    display: none;
+  }
 }
 
 h1 {
