@@ -63,6 +63,7 @@ body.home {
 
 .body-link:hover {
   color: #265c38;
+  text-decoration: none;
 }
 
 /* Profile / right column */
@@ -77,12 +78,8 @@ body.home {
   width: 100%;
 }
 
-@keyframes sway1 { 0%,100%{transform:rotate(-5deg)}  50%{transform:rotate(6deg)} }
-@keyframes sway2 { 0%,100%{transform:rotate(8deg)}   50%{transform:rotate(-4deg)} }
-@keyframes sway3 { 0%,100%{transform:rotate(-12deg)} 50%{transform:rotate(0deg)} }
-@keyframes sway4 { 0%,100%{transform:rotate(3deg)}   50%{transform:rotate(14deg)} }
-@keyframes sway5 { 0%,100%{transform:rotate(-8deg)}  50%{transform:rotate(5deg)} }
-@keyframes sway6 { 0%,100%{transform:rotate(10deg)}  50%{transform:rotate(-2deg)} }
+@keyframes spinCW  { from{transform:rotate(0deg)}   to{transform:rotate(360deg)} }
+@keyframes spinCCW { from{transform:rotate(0deg)}   to{transform:rotate(-360deg)} }
 
 .sf {
   position: absolute;
@@ -90,24 +87,24 @@ body.home {
 }
 
 /* top-left */
-.tl1 { width: 52px; top: -28px; left: -24px; animation: sway1 3.1s ease-in-out infinite; }
-.tl2 { width: 38px; top: -10px; left:  14px; animation: sway3 2.7s ease-in-out infinite 0.5s; }
-.tl3 { width: 32px; top:  16px; left: -28px; animation: sway5 3.4s ease-in-out infinite 1.0s; }
+.tl1 { width: 52px; top: -28px; left: -24px; animation: spinCW  7s linear infinite; }
+.tl2 { width: 38px; top: -10px; left:  14px; animation: spinCCW 5s linear infinite; }
+.tl3 { width: 32px; top:  16px; left: -28px; animation: spinCW  6s linear infinite; }
 
 /* top-right */
-.tr1 { width: 50px; top: -26px; right: -22px; animation: sway2 2.9s ease-in-out infinite 0.3s; }
-.tr2 { width: 36px; top:  -8px; right:  12px; animation: sway4 3.2s ease-in-out infinite 0.8s; }
-.tr3 { width: 30px; top:  18px; right: -26px; animation: sway6 2.6s ease-in-out infinite 1.3s; }
+.tr1 { width: 50px; top: -26px; right: -22px; animation: spinCCW 8s linear infinite; }
+.tr2 { width: 36px; top:  -8px; right:  12px; animation: spinCW  5s linear infinite; }
+.tr3 { width: 30px; top:  18px; right: -26px; animation: spinCCW 6s linear infinite; }
 
 /* bottom-left */
-.bl1 { width: 50px; bottom: -26px; left: -22px; animation: sway3 3.0s ease-in-out infinite 0.2s; }
-.bl2 { width: 34px; bottom:  -8px; left:  10px; animation: sway1 2.8s ease-in-out infinite 0.7s; }
-.bl3 { width: 28px; bottom:  16px; left: -24px; animation: sway5 3.3s ease-in-out infinite 1.2s; }
+.bl1 { width: 50px; bottom: -26px; left: -22px; animation: spinCCW 7s linear infinite; }
+.bl2 { width: 34px; bottom:  -8px; left:  10px; animation: spinCW  5s linear infinite; }
+.bl3 { width: 28px; bottom:  16px; left: -24px; animation: spinCCW 6s linear infinite; }
 
 /* bottom-right */
-.br1 { width: 48px; bottom: -24px; right: -20px; animation: sway4 3.1s ease-in-out infinite 0.4s; }
-.br2 { width: 32px; bottom:  -6px; right:   8px; animation: sway2 2.7s ease-in-out infinite 0.9s; }
-.br3 { width: 26px; bottom:  18px; right: -22px; animation: sway6 3.5s ease-in-out infinite 1.5s; }
+.br1 { width: 48px; bottom: -24px; right: -20px; animation: spinCW  8s linear infinite; }
+.br2 { width: 32px; bottom:  -6px; right:   8px; animation: spinCCW 5s linear infinite; }
+.br3 { width: 26px; bottom:  18px; right: -22px; animation: spinCW  6s linear infinite; }
 
 .photo-wrapper {
   position: relative;
