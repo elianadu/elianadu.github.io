@@ -188,6 +188,86 @@ body.home {
   background-color: #3d6b4f;
 }
 
+/* Dark mode toggle button */
+#theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2c5440;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+  z-index: 100;
+}
+
+#theme-toggle:hover {
+  background-color: #3d6b4f;
+}
+
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dark mode */
+body.home.dark {
+  background-color: #1a1e1b;
+  color: #dde8e1;
+}
+
+body.home.dark .bio h1 {
+  color: #dde8e1;
+}
+
+body.home.dark .bio p {
+  color: #c8d8cc;
+}
+
+body.home.dark .body-link {
+  color: #7dba98;
+}
+
+body.home.dark .body-link:hover {
+  color: #a0d4b4;
+}
+
+body.home.dark .photo-caption {
+  color: #8a9e8f;
+}
+
+body.home.dark .contact-link {
+  color: #c8d8cc;
+}
+
+body.home.dark .contact-link:hover {
+  color: #7dba98;
+}
+
+body.home.dark .link-icon {
+  background-color: #3d6b4f;
+}
+
+body.home.dark .link-icon:hover,
+body.home.dark .contact-link:hover .link-icon {
+  background-color: #4e8464;
+}
+
+body.home.dark #theme-toggle {
+  background-color: #4e8464;
+}
+
+body.home.dark #theme-toggle:hover {
+  background-color: #5e9974;
+}
+
 /* Home responsive */
 @media (max-width: 640px) {
   .home-container {
