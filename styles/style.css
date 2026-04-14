@@ -129,7 +129,7 @@ body.home {
   transition: none;
 }
 
-.photo-wrapper:hover .photo-illustrated,
+body:not(.touch-device) .photo-wrapper:hover .photo-illustrated,
 .photo-wrapper.toggled .photo-illustrated {
   opacity: 1;
 }
@@ -143,6 +143,8 @@ body.home {
   margin-bottom: 1.4rem;
   text-align: center;
   width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 /* Contact links list */

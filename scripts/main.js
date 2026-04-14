@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // On touch devices, disable CSS :hover so tap-toggle works correctly
+  window.addEventListener("touchstart", () => {
+    document.body.classList.add("touch-device");
+  }, { once: true });
+
   // Mobile tap toggle for photo swap
   const photoWrapper = document.querySelector(".photo-wrapper");
   if (photoWrapper) {
