@@ -1,8 +1,0 @@
-{
-  "home": { "file": "index.html", "pageId": "3ccd4513095680a29a15e311f9026147" },
-  "now": { "file": "now.html", "pageId": "3ccd45130956805b825df3a8b2308dad" },
-  "writing": { "file": "writing.html", "pageId": "3ccd45130956802485a1d8b3d6794660" },
-  "projects": { "file": "projects.html", "pageId": "3ccd451309568034b88cc9a714bd3e8e" },
-  "inspirations": { "file": "inspirations.html", "pageId": "3ccd4513095680fdb07ecad253b08791" },
-  "contact": { "file": "contact.html", "pageId": "3ccd45130956800b9162ddab131f87fe" }
-}
