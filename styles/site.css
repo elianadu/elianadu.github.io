@@ -45,11 +45,16 @@ body {
   display: grid;
   grid-template-columns: var(--navw) minmax(0, var(--colw)) var(--railw);
   gap: 2.6rem;
-  padding: 3.2rem var(--pagepad) 3.6rem;
+  padding: 6.5rem var(--pagepad) 5rem;
   justify-content: center;
   align-items: start;
   min-height: 100vh;
 }
+
+.page--noRail {
+  grid-template-columns: var(--navw) minmax(0, var(--colw));
+}
+.page--noRail .main { max-width: var(--colw); }
 
 /* --------------------------------------------------------------- nav col */
 
