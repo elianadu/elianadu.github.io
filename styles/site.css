@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Eliana Du — site styles (final, from playground v3)
+   Nav/wordmark: IM Fell English SC   Heading/body: EB Garamond
+   ========================================================================== */
+
+:root {
+  --bg:     #1B211E;
+  --text:   #DED8C6;
+  --bright: #E7E3D6;
+  --muted:  #8C8B7F;
+  --accent: #5E9074;
+  --chip:   #3E6B52;
+  --petal:  #F5C118;
+  --core:   #2B1A05;
+
+  --navface:  "IM Fell English SC", serif;
+  --headface: "EB Garamond", serif;
+  --bodyface: "EB Garamond", serif;
+
+  --marksize: 2.65rem;
+  --navsize:  1.65rem;
+  --navgap:   1.55rem;
+  --headsize: 1.65rem;
+  --headweight: 400;
+  --bodysize: 1.1rem;
+  --bodylh:   1.62;
+
+  --colw:     30rem;
+  --navw:     15rem;
+  --railw:    20rem;
+  --pagepad:  4.5rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--bodyface);
+  font-optical-sizing: auto;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: var(--navw) minmax(0, var(--colw)) var(--railw);
+  gap: 2.6rem;
+  padding: 3.2rem var(--pagepad) 3.6rem;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------- nav col */
+
+.markline { margin: 0 0 2.4rem; }
+.mark {
+  font-family: var(--navface);
+  font-size: var(--marksize);
+  line-height: 1.1;
+  color: var(--bright);
+  text-decoration: none;
+  letter-spacing: .01em;
+  display: block;
+}
+.mark:hover { opacity: .85; }
+
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav li + li { margin-top: var(--navgap); }
+nav a {
+  display: block;
+  position: relative;
+  font-family: var(--navface);
+  font-size: var(--navsize);
+  line-height: 1.1;
+  color: var(--text);
+  text-decoration: none;
+  opacity: .82;
+}
+nav a:hover { opacity: 1; }
+nav a[aria-current="page"] { opacity: 1; color: var(--bright); }
+
+/* marker sits outside the text flow so nav items stay flush-left with the wordmark */
+.nsf {
+  position: absolute; left: -1.5em; top: 50%;
+  width: 1.05em; height: 1.05em;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+nav a[aria-current="page"] .nsf { opacity: 1; }
+
+/* -------------------------------------------------------------- content */
+
+.main { min-width: 0; }
+
+.main h1 {
+  font-family: var(--headface);
+  font-weight: var(--headweight);
+  font-size: var(--headsize);
+  line-height: 1.18;
+  letter-spacing: -.005em;
+  color: var(--bright);
+  margin: 0 0 1.15rem;
+}
+
+.main h2 {
+  font-family: var(--headface);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--bright);
+  margin: 2rem 0 .6rem;
+}
+
+.main p { margin: 0 0 1rem; font-size: var(--bodysize); line-height: var(--bodylh); overflow-wrap: break-word; }
+.main ul { margin: 0 0 1rem; padding-left: 1.15rem; font-size: var(--bodysize); line-height: var(--bodylh); }
+.main li { margin-bottom: .4rem; }
+.main strong { color: var(--bright); font-weight: 600; }
+a.il { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.entries { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.entries li { padding: 1rem 0; border-top: 1px solid rgba(255,255,255,.08); }
+.entries li:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
+.entries .et { font-weight: 600; color: var(--bright); display: block; margin-bottom: .2rem; }
+.entries .em { font-size: .82rem; color: var(--muted); display: block; margin-bottom: .3rem; }
+
+.updated { font-size: .8rem; color: var(--muted); margin-top: 2.5rem; }
+
+/* ------------------------------------------------------------------ rail */
+
+.rail { min-width: 0; }
+.frame { position: relative; padding: 1.4rem; }
+.frame .inner { border: 3px solid var(--bright); border-radius: 3px; overflow: hidden; }
+.frame img { display: block; width: 100%; }
+.cap {
+  font-family: var(--bodyface);
+  font-style: italic;
+  font-size: .82rem;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: center;
+  margin: .5rem 0 0;
+}
+
+.links { list-style: none; margin: 1.6rem 0 0; padding: 0 0 0 1.4rem; }
+.links li + li { margin-top: .55rem; }
+.links a, .links button {
+  display: flex; align-items: center; gap: .7rem;
+  color: var(--text); text-decoration: none;
+  font-family: var(--bodyface); font-size: 1.02rem;
+  background: none; border: 0; padding: 0; cursor: pointer; text-align: left;
+}
+.links a:hover, .links button:hover { color: var(--bright); }
+.chip { width: 27px; height: 27px; flex: 0 0 27px; border-radius: 6px; background: var(--chip); display: grid; place-items: center; }
+.chip svg { width: 15px; height: 15px; fill: var(--bright); }
+
+#toast {
+  position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 10px);
+  background: var(--bright); color: var(--bg);
+  font-family: var(--bodyface); font-size: .95rem;
+  padding: .5rem 1.1rem; border-radius: 999px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* -------------------------------------------------------------- mobile */
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+    padding: 2.2rem 1.5rem 3rem;
+    gap: 2.2rem;
+  }
+  .rail { max-width: 20rem; }
+  :root { --marksize: 2.1rem; --navsize: 1.35rem; --navgap: 1.1rem; }
+}
+
+/* ------------------------------------------------------------ a11y */
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--petal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: .01ms !important; }
+}
