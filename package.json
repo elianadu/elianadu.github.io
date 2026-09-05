@@ -1,0 +1,14 @@
+{
+  "name": "eliana-du-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal website of Eliana Du",
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1",
+    "dev": "npm start",
+    "build": "python3 build.py"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
